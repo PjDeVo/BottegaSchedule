@@ -9,7 +9,6 @@ class Schedule extends Component {
 
   renderCourses() {
     const data = this.props.courses
-
     return data.map((course, index) => {
       if (course.enrolled) {
         return <ScheduleCourse {...course} key={index} />
@@ -22,6 +21,7 @@ class Schedule extends Component {
       <div className='schedule'>
         <h1 className='schedule__title'> My Schedule</h1>
         {this.renderCourses()}
+
         <ProgressTracker />
         <Gradient />
       </div>
@@ -34,5 +34,4 @@ function mapStateToProps(state) {
     courses: state.courses
   }
 }
-
-export default connect(mapStateToProps)(Schedule);
+export default connect(mapStateToProps)(Schedule)
