@@ -6,9 +6,7 @@ class Arrow extends Component {
     super(props)
 
     this.state = {
-
       status: false
-
     }
   }
 
@@ -26,7 +24,7 @@ class Arrow extends Component {
   render() {
     this.id = `arrow-${this.props.id}`
     return (
-      <a id="arrow" onClick={() => this.toggleArrow()} className={`${this.props.className} arrow`}></a>
+      <a id={this.id} onClick={() => this.toggleArrow()} className={`${this.props.className} arrow`}></a>
     )
   }
 }

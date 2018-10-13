@@ -20,6 +20,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    transition: all .3 ease;
+
   }
 
   &:before {
@@ -30,5 +32,16 @@
   &:after {
     height: 0.2em;
     width: 1em;
+  }
+}
+
+.action-remove {
+  &::before {
+    transform: translate(-50%, -50%) roate(45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) roate(-135deg);
+
   }
 }
